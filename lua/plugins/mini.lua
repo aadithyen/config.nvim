@@ -19,24 +19,6 @@ return {
 
       require('mini.icons').setup()
 
-      local animate = require 'mini.animate'
-      animate.setup {
-        cursor = {
-          timing = animate.gen_timing.quadratic {
-            easing = 'in-out',
-            duration = 200,
-            unit = 'total',
-          },
-        },
-        scroll = {
-          timing = animate.gen_timing.quadratic {
-            easing = 'in-out',
-            duration = 100,
-            unit = 'total',
-          },
-        },
-      }
-
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
