@@ -29,6 +29,16 @@ vim.opt.signcolumn = 'yes'
 -- Decrease update time
 vim.opt.updatetime = 250
 
+vim.opt.title = true
+
+vim.api.nvim_create_autocmd('BufEnter', {
+  desc = 'Updates titlestring to project folder name',
+  callback = function()
+    local project_folder = vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
+    vim.opt.titlestring = project_folder .. ' - %t'
+  end,
+})
+
 -- Decrease mapped sequence wait time
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
