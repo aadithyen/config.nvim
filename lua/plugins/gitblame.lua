@@ -1,8 +1,8 @@
 return {
-  'f-person/git-blame.nvim',
-  event = 'VeryLazy',
-  opts = {
-    enabled = false,
-    date_format = '%r %H:%M',
-  },
+  'FabijanZulj/blame.nvim',
+  config = function()
+    require('blame').setup {
+      date_format = '%R %d.%m',
+    }
+  end,
 }

@@ -26,12 +26,13 @@ return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons', 'justinhj/battery.nvim' },
   config = function()
-    require('battery').setup()
+    require('battery').setup {
+      show_unplugged_icon = false,
+    }
     require('lualine').setup {
       sections = {
         lualine_a = { clock, mode_icon },
         lualine_c = {
-          '%=',
           { 'filename', file_status = false, path = 1 },
         },
         lualine_z = { nvimbattery },
