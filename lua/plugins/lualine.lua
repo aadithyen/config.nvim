@@ -37,7 +37,12 @@ return {
         },
         lualine_z = { nvimbattery },
         lualine_y = { 'location' },
-        lualine_x = { 'filetype' },
+        lualine_x = {
+          function()
+            return vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
+          end,
+          'filetype',
+        },
       },
       options = {
         icons_enabled = true,
