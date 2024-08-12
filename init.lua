@@ -69,7 +69,7 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('n', '<leader>ff', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>ff', vim.cmd.Oil)
 vim.keymap.set('i', 'jj', '<Esc>')
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
 vim.keymap.set({ 'n', 'v' }, '<leader>Y', '"+Y')
