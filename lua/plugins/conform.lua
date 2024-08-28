@@ -29,6 +29,9 @@ return {
         lua = { 'stylua' },
         go = { 'goimports', 'gofumpt' },
         gomod = { 'goimports', 'gofumpt' },
+        html = { 'prettier' },
+        js = { 'prettier' },
+        css = { 'prettier' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
