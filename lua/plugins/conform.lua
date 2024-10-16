@@ -21,13 +21,14 @@ return {
         -- languages here or re-enable it for the disabled ones.
         local disable_filetypes = { c = true, cpp = true }
         return {
-          timeout_ms = 500,
+          timeout_ms = 1000,
           lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
         }
       end,
+
       formatters_by_ft = {
         lua = { 'stylua' },
-        go = { 'goimports', 'gofumpt' },
+        go = { 'goimports', 'gofumpt', 'golines' },
         gomod = { 'goimports', 'gofumpt' },
         html = { 'prettier' },
         js = { 'prettier' },
@@ -38,6 +39,12 @@ return {
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         -- javascript = { { "prettierd", "prettier" } },
+      },
+
+      formatters = {
+        golines = {
+          append_args = { '-m', '120' },
+        },
       },
     },
   },

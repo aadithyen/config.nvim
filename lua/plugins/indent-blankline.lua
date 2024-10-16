@@ -11,6 +11,16 @@ return {
           show_start = false,
           show_end = false,
         },
+        exclude = {
+          buftypes = {
+            'lspinfo',
+            'packer',
+            'checkhealth',
+            'help',
+            'dashboard',
+            '',
+          },
+        },
       }
     end,
   },

@@ -10,6 +10,12 @@ vim.opt.relativenumber = true
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
+if vim.g.neovide then
+  vim.o.guifont = 'JetBrainsMono Nerd Font'
+  vim.opt.linespace = 2
+  -- Put anything you want to happen only in Neovide here
+end
+
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
@@ -70,7 +76,6 @@ vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.keymap.set('n', '<leader>ff', vim.cmd.Oil)
-vim.keymap.set('i', 'jj', '<Esc>')
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
 vim.keymap.set({ 'n', 'v' }, '<leader>Y', '"+Y')
 vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p')
